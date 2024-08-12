@@ -14,5 +14,5 @@ public class CreateAuctionRequest {
     private String description;
     private Client client;
     private Category category;
-    private Date auctionDate;
+    private Date auctionStartDate;
 }
