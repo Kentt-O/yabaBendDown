@@ -16,7 +16,7 @@ public class BidServiceImpl implements BidService {
     @Override
     public BidResponse placeBid(BidRequest bidRequest) {
         BidEvent event = new BidEvent(
-                // Refactor and Generate a bidId that updates on its own
+                // Remember to Refactor and Generate a bidId that updates on its own
                 "customer",
                 bidRequest.getCustomerId(),
                 bidRequest.getBidAmount(),
