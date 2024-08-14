@@ -22,9 +22,9 @@ class PayStackPaymentServiceImplTest {
 
         ResponseEntity<PaymentResponse> response = paymentService.payOut(paymentRequest);
 
-//        assertTrue(response.getBody());
-//        assertNotNull(response);
-//        assertEquals(200, response.getStatusCode().value());
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCode().value());
+        assertTrue(response.getBody() != null);
     }
 
 }

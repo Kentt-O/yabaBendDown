@@ -19,7 +19,6 @@ public class Client implements BidObserver {
 
     @Override
     public void update(BidEvent bidEvent) {
-
         System.out.println("Client notified of new bid: " + bidEvent.getBidAmount());
     }
 }

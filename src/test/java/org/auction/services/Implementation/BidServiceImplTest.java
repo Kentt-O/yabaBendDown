@@ -29,6 +29,5 @@ public class BidServiceImplTest {
         assertThat(response).isNotNull();
         assertThat(response.getBidAmount()).isEqualByComparingTo("100.00");
         assertThat(response.getCustomerId()).isEqualTo("customer001");
-
     }
 }
