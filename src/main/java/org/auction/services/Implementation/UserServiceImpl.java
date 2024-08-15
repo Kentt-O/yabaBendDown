@@ -14,6 +14,7 @@ import org.auction.exceptions.UserNameNotFoundException;
 import org.auction.services.InterfaceSocket.UserService;
 import org.springframework.stereotype.Service;
 
+import static org.auction.data.model.UserRoles.CUSTOMER;
 import static org.auction.utils.UserMapper.registerResponse;
 import static org.auction.utils.UserMapper.userMapper;
 
@@ -51,7 +52,9 @@ public class UserServiceImpl implements UserService {
         if (userDetails(registerRequest.getUsername())){
             throw new UserNameExistsException("Username taken, try another");
         }
+
         User userInfo = userMapper(registerRequest.getEmail(),registerRequest.getUsername(),registerRequest.getPassword());
+        userInfo.setRole(CUSTOMER);
         userRepository.save(userInfo);
         return registerResponse("Registration successful");
     }

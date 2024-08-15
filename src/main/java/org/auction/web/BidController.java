@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/bids")
+@RequestMapping("/api/v1")
 public class BidController {
     @Autowired
     private BidService bidService;
 
-    @PostMapping
+    @PostMapping("/bids")
     public ResponseEntity<BidResponse> placeBid(@RequestBody BidRequest bidRequest){
         BidResponse response = bidService.placeBid(bidRequest);
         return ResponseEntity.ok(response);

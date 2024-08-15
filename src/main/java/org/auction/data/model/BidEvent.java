@@ -18,5 +18,5 @@ public class BidEvent {
     private String bidId;
     private String customerId;
     private BigDecimal bidAmount;
-    private LocalDateTime timeStamp;
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
