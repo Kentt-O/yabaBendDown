@@ -25,8 +25,6 @@ public class ClientServiceImpl implements ClientServices {
 
          ClientAuctionResponse response = new ClientAuctionResponse();
          response.setAuctionId(auction.getId());
-         response.getBidAmount(auction.);
-         response.isBidAccepted();
 
          return response;
     }
